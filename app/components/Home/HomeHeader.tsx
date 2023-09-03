@@ -17,9 +17,9 @@ export function HomeHeader({ fixed }: { fixed?: boolean }) {
     <header
       className={`${
         fixed ? "fixed" : ""
-      } z-20 flex h-[82px]  bg-indigo-700 flex-col`}
+      } z-20 flex h-[50px]  bg-indigo-700 flex-col`}
     >
-      <div className="flex h-8 bg-slate-900 w-full items-center justify-center text-base sm:text-lg ">
+      {/* <div className="flex h-8 bg-slate-900 w-full items-center justify-center text-base sm:text-lg ">
         <a
           href="https://trigger.dev"
           target="_blank"
@@ -41,7 +41,7 @@ export function HomeHeader({ fixed }: { fixed?: boolean }) {
           </a>
           .
         </p>
-      </div>
+      </div> */}
       <div className="flex items-center justify-between w-screen px-4">
         <div className="flex w-28 sm:w-44 mr-3">
           <Logo />
@@ -53,33 +53,7 @@ export function HomeHeader({ fixed }: { fixed?: boolean }) {
                 Try now
               </button>
             </PopoverTrigger>
-            <PopoverContent side="bottom" sideOffset={30}>
-              <NewDocument />
-              <PopoverArrow
-                className="fill-current text-indigo-700"
-                offset={20}
-              />
-            </PopoverContent>
           </Popover>
-
-          <li className="hover:cursor-pointer">
-            <GithubStar />
-          </li>
-          <li className="hover:cursor-pointer opacity-90 hover:opacity-100 transition">
-            <a href="mailto:hello@jsonhero.io">
-              <EmailIconTransparent />
-            </a>
-          </li>
-          <li className="hover:cursor-pointer opacity-90 hover:opacity-100 transition">
-            <a href="https://discord.gg/JtBAxBr2m3" target="_blank">
-              <DiscordIconTransparent />
-            </a>
-          </li>
-          <li className="hover:cursor-pointer opacity-90 hover:opacity-100 transition">
-            <a href="https://twitter.com/triggerdotdev" target="_blank">
-              <TwitterIcon />
-            </a>
-          </li>
         </ol>
       </div>
     </header>
