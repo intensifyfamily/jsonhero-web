@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run build:css && npm run build:search && remix build",
+    "build:new": "react-scripts build",
     "build:css": "tailwindcss -i ./styles/tailwind.css -o ./app/tailwind.css --minify",
     "build:worker": "esbuild --define:process.env.NODE_ENV='\"production\"' --minify --bundle --sourcemap --outdir=dist ./worker",
     "build:worker:analyze": "esbuild --define:process.env.NODE_ENV='\"production\"' --minify --bundle --sourcemap --metafile=meta.json --outdir=dist ./worker",
@@ -61,6 +62,7 @@
     "react-dom": "^17.0.2",
     "react-dropzone": "^11.4.2",
     "react-hotkeys-hook": "^3.4.4",
+    "react-scripts": "^5.0.1",
     "react-use-intercom": "^2.0.0",
     "react-virtual": "^2.10.4",
     "remix": "^1.2.3",
